@@ -1,20 +1,28 @@
 # Padavan
-代码基于vb1980和keke1023，感谢v大持续为老旧的系统更新软件版本。我做了一些整合优化。
+代码基于vb1980和keke1023，感谢v大持续为老旧的系统更新软件版本。
+我做了一些整合优化。更新github  action云编译脚本和教程。
+老设备padavan 3.4内核最终版！！
 
+注意事项：
+如果是硬改过32M内存的机器，如k2p 记得修改下编译脚本增加 CONFIG_32M_REBOOT_FIXUP=y  否则会有软重启失灵问题！！
+
+编译了openvpn后，配置页面在网络地图-网络状态-更多设置的菜单里、不会出现在主页面的菜单中！
 
 # 版本特点：
 
-1、解决了大家一直提到的mac系统打开页面响应慢的问题。
+1、mac系统打开页面响应慢的问题，适配手机页面，精简部分页面显示内容。
 
-2、自己经常要使用的zerotier更新最新且可使用。
+2、frp、zerotier等穿透插件版本更新。
 
-3、ss都是目前最新的版本。
+3、ss /xray/trojan 版本更新，都正常使用。
 
-4、iptv使用 msd_lite
+4、iptv使用 msd_lite 大大降低资源占用.
 
-5、一些界面的优化。支持手机页面。。
+5、定时重启失效、32M内存机器重启问题。
 
-6、重启不起作用等等问题。
+6、k2p mt7615 wifi芯片使用5.0.4.0驱动，支持打开kvr漫游。
+
+7、5.0驱动理论支持7603/7615/7915的kvr，自己测试。编译的时候自己检查下配置的是否5.0驱动！
 
 固件默认wifi名称
  - 2.4G：机器名_mac地址最后四位，如K2P_9981
@@ -72,13 +80,13 @@ wifi密码
 3.其他部分等同于hanwckf的源码，有少量优化来自immortalwrt的padavan源码  
 4.添加了MSG1500的7615版本config  
 
-以下附上他们四位的源码地址供参考  
-https://github.com/hanwckf/rt-n56u  
-https://github.com/chongshengB/rt-n56u  
-https://github.com/padavanonly/rt-n56u  
-https://github.com/immortalwrt/padavan
+以下附上他们四位的源码地址供参考 
 
-已知问题： 
-最后编译出的固件对7612无线的支持已知是有问题的，包含7612的机型比如B70是无法正常工作的  
-已测试的机型为MSG1500-7615，JCG-Q20，CR660x  
+https://github.com/hanwckf/rt-n56u
+
+https://github.com/chongshengB/rt-n56u
+
+https://github.com/padavanonly/rt-n56u
+
+https://github.com/immortalwrt/padavan
 
